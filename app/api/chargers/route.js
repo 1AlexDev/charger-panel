@@ -7,7 +7,7 @@ export async function GET() {
     const chargers = await prisma.charger.findMany();
     return new Response(JSON.stringify(chargers), { status: 200 });
   } catch (error) {
-    return new Response(JSON.stringify({ error: 'Failed to fetch chargers' }), { status: 500 });
+    return new Response(JSON.stringify({ error: 'Failed to fetch chargers: ', error }), { status: 500 });
   }
 }
 

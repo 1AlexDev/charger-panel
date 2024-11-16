@@ -1,15 +1,15 @@
-datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")  // This will create a SQLite file in your project root
-}
-
 generator client {
   provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model Charger {
   id          Int      @id @default(autoincrement())
   name        String
-  signedOutBy String?  // Nullable field, if no one has signed it out
+  signedOutBy String?
   createdAt   DateTime @default(now())
 }
