@@ -1,0 +1,37 @@
+/* Tailwind Utility Classes */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark Mode Customization */
+body {
+  background-color: #121212; /* Dark background */
+  color: #e4e4e7; /* Light gray text */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Buttons */
+button {
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-2px); /* Subtle elevation on hover */
+}
+
+/* Cards */
+.card {
+  background-color: #1c1c1e; /* Slightly lighter gray for cards */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  padding: 16px;
+}
+
+.card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Slightly more pronounced hover shadow */
+}
+
+/* Headers */
+h1, h2, h3, h4, h5 {
+  color: #ffffff; /* Bright white text for headers */
+}

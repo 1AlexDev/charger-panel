@@ -1,0 +1,15 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"  // This will create a SQLite file in your project root
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Charger {
+  id          Int      @id @default(autoincrement())
+  name        String
+  signedOutBy String?  // Nullable field, if no one has signed it out
+  createdAt   DateTime @default(now())
+}
